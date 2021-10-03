@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
+/*
+    Faça um programa para imprimir um n informado pelo usuário. Use 
+    uma função que receba um valor n inteiro imprima até a n-ésima linha.
+*/
+
 void imprimir_n(int num);
 
 int main(){

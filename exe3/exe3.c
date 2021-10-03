@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
+/*
+    Faça um programa, com uma função que necessite de três 
+    argumentos, e que forneça a soma desses três argumentos.
+*/
+
 void soma(a, b, c);
 
 int main(){
