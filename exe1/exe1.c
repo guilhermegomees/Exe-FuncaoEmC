@@ -1,29 +1,28 @@
 #include <stdio.h>
-#include <string.h>
 
 /*
-    Faça um programa para imprimir um n informado pelo usuário. Use 
-    uma função que receba um valor n inteiro e imprima até a n-ésima linha.
+    Faça um programa com uma função chamada somaImposto. A função 
+    possui dois parâmetros formais: taxaImposto, que é a quantia de 
+    imposto sobre vendas expressa em porcentagem e custo, que é o 
+    custo de um item antes do imposto. A função “altera” o valor de 
+    custo para incluir o imposto sobre vendas.
 */
 
-void imprimir_n(int num);
+void somaImposto(taxaImposto, custo);
 
 int main(){
-    int num = 0;
+    float taxaImposto, custo;
 
-    printf("Informe um numero: ");
-    scanf("%d", &num);
-    printf("\n");
-    imprimir_n(num);
+    printf("Taxa do Imposto: ");
+    scanf("%f", &taxaImposto);
+    printf("Custo: ");
+    scanf("%f", &custo);
+    somaImposto(taxaImposto, custo);
 
     return 0;
 }
 
-void imprimir_n(int num){
-    for(int i = 1; i < num; i++){
-        for(int j = 1; j <= i; j++){
-            printf("%d ", i);
-        }
-        printf("\n");
-    }    
+void somaImposto(taxaImposto, custo){
+    float resultadoImposto = custo + (custo * taxaImposto / 100);
+    printf("\nResultado: %.2f", resultadoImposto);
 }
