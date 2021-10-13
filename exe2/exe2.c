@@ -1,40 +1,28 @@
 #include <stdio.h>
 
 /*
-    Faça um programa que converta da notação de 24 horas para a notação de 12 horas. Por
-    exemplo, o programa deve converter 14:25 em 2:25. A entrada é dada em dois inteiros.
-    Fazer uma função para a conversão do valor. Inclua um loop que permita que o usuário
-    repita esse cálculo para novos valores de entrada todas as vezes que desejar. 
+    Faça um programa para imprimir um n informado pelo usuário. Use 
+    uma função que receba um valor n inteiro imprima até a n-ésima linha.
 */
 
-void convertHora(hora, minuto);
+void imprimir_n(int num);
 
 int main(){
-    int controle = 1;
-    while(controle != 0){
-        system("cls");
-        int hora, minuto;
-        printf("==== NOTACAO HORARIA ====\n\n");
+    int num = 0;
 
-        printf("Informe as horas: ");
-        scanf("%d", &hora);
-        printf("Informe os minutos: ");
-        scanf("%d", &minuto);
-        convertHora(hora, minuto);
-        
-        printf("\n\nDeseja continuar ? \n\t1 - SIM\n\t0 - NAO\n\n> ");
-        scanf("%d", &controle);
-    }
-    printf("\nObrigado, ate logo!");
+    printf("Informe um numero: ");
+    scanf("%d", &num);
+    printf("\n");
+    imprimir_n(num);
+
+    return 0;
 }
 
-void convertHora(hora, minuto){
-    if(hora > 12){
-        hora -= 12;
-        printf("\nHora convertida: %d:%d AM", hora, minuto);
-    }
-    else{
-        hora += 12;
-        printf("\nHora convertida: %d:%d PM", hora, minuto);
-    }
+void imprimir_n(int num){
+    for(int i = 1; i < num; i++){
+        for(int j = 1; j <= i; j++){
+            printf("%d ", j);
+        }
+        printf("\n");
+    }    
 }

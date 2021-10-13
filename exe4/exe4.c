@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 /*
     Faça um programa, com uma função que necessite de um argumento. 
